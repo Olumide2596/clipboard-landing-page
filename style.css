@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family:;
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+/* footer */
+
+footer {
+    background-color: hsl(201, 11%, 80%);
+    display: flex;
+    padding: 5% 10%;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: hsl(201, 11%, 20%);
+}
+
+/* header */
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url(/images/bg-header-desktop.png);
+    background-repeat: none;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    gap: 40px;
+}
+
+header img {
+    width: 100px;
+}
+
+.center_text {
+    text-align: center;
+    width: 50%;
+}
+
+/* Button */
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn a:hover,
+.btn a:focus {
+    opacity: 0.75;
+}
+
+.btn .cyan {
+    background-color:hsl(171, 66%, 44%) ;
+}
+.btn .blue {
+    background-color: hsl(233, 100%, 69%);
+}
+.btn a + a {
+    margin-left: 10px;
+}
+
+/* main */
+/* containers */
+
+
+/* First container: this has been seperated into 2 divs, the parent div will be a flex, the the 2nd div will also be a flex in the row direction */
+.first_container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mac {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mac-book {
+    margin-left: -200px;
+    overflow: hidden;
+}
+
+.mac .text {
+    width: 25%;
+    margin: 80px 0 0 80px;
+}
+.mac .text p {
+    margin-bottom: 40px;
+} 
