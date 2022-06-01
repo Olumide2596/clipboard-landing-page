@@ -219,7 +219,7 @@ header img {
     gap: 50px;
 }
 
-@media only screen and (max-width:375px){
+@media only screen and (max-width:420px){
 
     body {
         max-width: 375px;
