@@ -4,22 +4,47 @@
 }
 
 body {
-    font-family:;
+    font-family:'Bai Jamjuree', sans-serif;
+}
+.wrapper {
     width: 100%;
     max-width: 1440px;
+    margin: 0 auto;
+    /* overflow: hidden; */
 }
 
+
+
+h1, h2, h3 {
+    color: hsl(210, 10%, 33%) ;
+    margin-bottom: 20px;
+}
+
+p {
+    color:hsl(201, 11%, 66%) ;
+}
+
+a {
+    list-style: none;
+}
 
 /* footer */
 
 footer {
-    background-color: hsl(201, 11%, 80%);
+    background-color: hsl(201, 11%, 95%);
     display: flex;
     padding: 5% 10%;
+    /* justify-content: center;
+    align-items: center; */
     justify-content: space-between;
 }
 
-nav ul {
+.logo {
+    width: 45px;
+    align-self: flex-start;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -27,18 +52,29 @@ nav ul {
     gap: 20px;
 }
 
+li{
+    list-style: none;
+    padding-bottom: 30px;
+}
+
 li a {
     text-decoration: none;
     color: hsl(201, 11%, 20%);
 }
 
+li a:hover {
+    color: hsl(171, 66%, 44%);
+}
+
+.logos {
+    display: flex;
+    gap: 20px;
+
+}
+
 /* header */
 
-.wrapper {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
+
 
 header {
     background-image: url(/images/bg-header-desktop.png);
@@ -50,7 +86,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 100px;
-    gap: 40px;
+    gap: 60px;
 }
 
 header img {
@@ -69,12 +105,15 @@ header img {
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 50px;
+    /* transition-property: all;
+    transition-duration: .6s; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .btn a:hover,
 .btn a:focus {
     opacity: 0.75;
+    /* transform: scale(.9); */
 }
 
 .btn .cyan {
@@ -90,14 +129,19 @@ header img {
 /* main */
 /* containers */
 
-
-/* First container: this has been seperated into 2 divs, the parent div will be a flex, the the 2nd div will also be a flex in the row direction */
-.first_container {
+.container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 80px;
+}
+
+
+/* First container: this has been seperated into 2 divs, the parent div will be a flex, the the 2nd div will also be a flex in the row direction */
+.first {
+    gap: 60px;
+    overflow: hidden;
 }
 
 .mac {
@@ -106,8 +150,9 @@ header img {
 }
 
 .mac-book {
-    margin-left: -200px;
+    margin-left: -100px;
     overflow: hidden;
+    width: 60%;
 }
 
 .mac .text {
@@ -117,3 +162,173 @@ header img {
 .mac .text p {
     margin-bottom: 40px;
 } 
+
+/*Second container: going to center using flex*/
+.second {
+    
+}
+
+.device {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: 80px;
+}
+
+/* third container */
+.third {
+
+}
+
+.text_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 10px ;
+    text-align: center;
+    width: 100%;
+}
+
+.sections img {
+    width: 40px;
+    margin-bottom: 40px;
+}
+
+/* Fourth containers, only have to give space */
+.fourth {
+
+}
+
+.companies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Fifth container */
+
+.fifth {
+    gap: 50px;
+}
+
+@media only screen and (max-width:375px){
+
+    body {
+        max-width: 375px;
+    }
+
+    h2, h3 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .wrapper {
+        
+    }
+    .container {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 100px 10px;
+    }
+
+    .center_text {
+        width: 100%;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn a {
+        padding: 15px 70px;
+    }
+
+    .btn a + a {
+        margin-left: 0;
+    }
+
+    /* first container */
+    .first {
+
+    }
+
+    .mac {
+        flex-direction: column;
+    }
+
+    .mac-book {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .mac .text {
+        width: 100%;
+        margin: 80px 0;
+        text-align: center; 
+    }
+
+    /* second */
+    .device {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* third */
+    .third {
+        gap: 50px;
+    }
+
+    .text_logo {
+        flex-direction: column;
+    }
+
+    .sections {
+        margin: 40px 10px;
+    }
+
+    /* fourth */
+    .companies {
+        flex-direction: column;
+    }
+    
+    /* footer */
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    ul {
+        padding: 0;
+    }
+    .logos {
+        gap: 40px;
+    }
+
+}
